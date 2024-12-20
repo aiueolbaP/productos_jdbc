@@ -1,0 +1,31 @@
+El lenguaje que usan las bases de datos es SQL
+En ingeniería se ven tambien las NOSQL (Not Only SQL)
+Los archivos del Intellij que se hagan se harán con Maven
+En groupip se pone el nombre del paquete "udla.pflores.java.jdbc"
+hay que sacar un código de una página de maven para que funcione la huevada y depende de la version de mysql
+y ejecutar una código con las dependencias y versiones de MySQL para poder conectar a la base de datos
+Se necesita hacer una clase que haga la conexion con la base de sql
+se necesita para eso el url de la base con el localhost y el nombre de la base
+se necesita el usuario y la contraseña
+para hacer la conexion se usa "Connection" una clase propia de java
+Connection conexion = DriverManager.getConnection(url, us, pw) dentro de un try porque las conexiones pueden fallar
+La clase DriverManager contiene los drivers necesarios para que funcione la conexión con la base de datos
+La clase Statement procesa sentencias de SQL y permite obtener datos resultantes de ejecución de comandos de SQL
+el metodo createStatement crea un objeto que modela una secuencia de SQL, la que permitirá leer lineas de comando
+El método executeQuery permite ejecutar una sentencia en SQL directo desde Java
+La clase ResultSet genera tablas de datos como objetos de sql con punteros que apuntan a una dirección de una base de datos, 
+por eso tiene metodos como next y puede usarse con un while
+
+Entonces, se crea un objeto de clase Connection llamado "conn" el cual será asignado a un método de la clase DriverManager
+que permitirá hacer la conexión, siendo este el DriverManager.getConnection(String,String,String), quedando como:
+Connection conn = DriverManager.getConnection(String,String,String)
+El objeto "conn" usa los métodos de la clase Connection para ejecutar comandos de SQL
+como el método: conn.createStatement, este crea una sentencia que pueda ejecutar comandos de SQL y la asigna a un objeto "st" de tipo Statement, quedando:
+Statement st = conn.createStatement, después, el objeto "st" usa el método st.executeQuery para ejecutar una linea de comando SQL y asigna el resultado en un ResultSet, quedando como:
+ResultSet resultado = st.executeQuery("Sentencia de SQL, por ejm, select * from productos");
+
+
+
+
+Asi como todas las conexiones se abren, se deben cerrar
+me voy a matar
