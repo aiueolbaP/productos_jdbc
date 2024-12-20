@@ -2,7 +2,7 @@ El lenguaje que usan las bases de datos es SQL
 En ingeniería se ven tambien las NOSQL (Not Only SQL)
 Los archivos del Intellij que se hagan se harán con Maven
 En groupip se pone el nombre del paquete "udla.pflores.java.jdbc"
-hay que sacar un código de una página de maven para que funcione la huevada y depende de la version de mysql
+hay que sacar un código de una página de maven para que funcione la conexión y depende de la version de mysql
 y ejecutar una código con las dependencias y versiones de MySQL para poder conectar a la base de datos
 Se necesita hacer una clase que haga la conexion con la base de sql
 se necesita para eso el url de la base con el localhost y el nombre de la base
