@@ -25,7 +25,4 @@ Statement st = conn.createStatement, después, el objeto "st" usa el método st.
 ResultSet resultado = st.executeQuery("Sentencia de SQL, por ejm, select * from productos");
 
 
-
-
 Asi como todas las conexiones se abren, se deben cerrar
-me voy a matar
